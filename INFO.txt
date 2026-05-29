@@ -1,0 +1,41 @@
+КАК ЗАПУСТИТЬ СКРИПТ
+
+1. Установи Python 3.10 или новее.
+   При установке поставь галочку "Add Python to PATH".
+
+2. Открой папку проекта:
+
+3. Установи библиотеки:
+
+   pip install -r requirements.txt
+
+   Если pip не работает:
+
+   py -m pip install -r requirements.txt
+
+4. Открой config\__init__.py и заполни:
+
+   API_ID
+   API_HASH
+   BOT_TOKEN
+   ADMIN_ID
+   TARGET_CHAT
+
+5. Настрой фильтры:
+
+   MIN_STARS_LEVEL - минимальный уровень Stars.
+   MAX_STARS_LEVEL - максимальный уровень Stars или None.
+   SEND_USERS_WITH_PAID_MESSAGES - отправлять ли пользователей с платными сообщениями.
+   SEND_USERS_WHO_REQUIRE_PREMIUM_TO_CONTACT - отправлять ли пользователей, которым можно писать только с Telegram Premium.
+
+6. Запусти:
+
+   python main.py
+
+   Если python не работает:
+
+   py main.py
+
+7. При первом запуске Telethon попросит номер телефона, код из Telegram и, возможно, облачный пароль.
+
+8. Если пользователь уже есть в users.db по ID или username, бот не отправит его повторно.
